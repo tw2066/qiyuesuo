@@ -1,0 +1,15 @@
+{
+    "name": "lqr/qiyuesuo",
+    "autoload": {
+        "psr-4": {
+            "Lqr\\Qiyuesuo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "linqr",
+            "email": "59353073@qq.com"
+        }
+    ],
+    "require": {}
+}
