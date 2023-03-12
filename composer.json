@@ -4,7 +4,7 @@
     "description":"qiyuesuo",
     "autoload": {
         "psr-4": {
-            "Lqr\\Qiyuesuo\\": "src/"
+            "Lincome\\Qiyuesuo\\": "src/"
         }
     },
     "authors": [
