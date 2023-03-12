@@ -1,6 +1,7 @@
 {
-    "name": "lqr/qiyuesuo",
+    "name": "lincome/qiyuesuo",
     "version": "1.0",
+    "description":"qiyuesuo",
     "autoload": {
         "psr-4": {
             "Lqr\\Qiyuesuo\\": "src/"
