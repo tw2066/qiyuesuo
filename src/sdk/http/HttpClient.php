@@ -1,6 +1,6 @@
 <?php
 namespace Qiyuesuo\sdk\http;
-header("Content-Type: text/html; charset=utf-8");
+
 
 class HttpClient{
     function doService($url,HttpParameter $httpParameters, $headers, $connectTimeout, $readTimeout){

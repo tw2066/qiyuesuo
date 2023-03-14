@@ -1,6 +1,9 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
+
 class AttachmentDownloadRequest extends SdkRequest {
 
     const ATTACHMENT_DOWNLOAD = "/v2/attachment/download";  // 附件下载接口地址

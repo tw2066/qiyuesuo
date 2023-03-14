@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class DocumentDownloadRequest extends SdkRequest {
 
     const DOCUMENT_DOWNLOAD = "/v2/document/download";  // 文档下载接口地址

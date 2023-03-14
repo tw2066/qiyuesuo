@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class EmployeeListRequest extends SdkRequest {
 
     const EMPLOYEE_LIST = "/v2/employee/list";  // 员工列表接口地址

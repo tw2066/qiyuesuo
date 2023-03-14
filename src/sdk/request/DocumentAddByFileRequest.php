@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class DocumentAddByFileRequest extends SdkRequest {
 
     const ADDBYFILE_URL = "/v2/document/addbyfile";

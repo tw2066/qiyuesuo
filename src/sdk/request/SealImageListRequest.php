@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class SealImageListRequest extends SdkRequest {
 
     const SEAL_LIST = "/v2/seal/image";  // 印章列表接口地址

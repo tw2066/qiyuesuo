@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class TemplatePageRequest extends SdkRequest {
 
     const SEAL_LIST = "/v2/template/pageurl";  // 文件模板预览链接接口地址

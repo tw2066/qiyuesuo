@@ -1,5 +1,7 @@
 <?php
 namespace Qiyuesuo\sdk\request;
+
+use Qiyuesuo\sdk\param\ParamSwitcher;
 use Qiyuesuo\sdk\http\HttpParameter;
 /**
  * 创建草稿合同请求类

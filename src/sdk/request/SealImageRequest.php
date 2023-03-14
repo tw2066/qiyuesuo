@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class SealImageRequest extends SdkRequest {
 
     const SEAL_IMAGE = "/v2/seal/image";  // 获取印章图片

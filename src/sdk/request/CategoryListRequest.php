@@ -1,7 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
-
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class CategoryListRequest extends SdkRequest {
 
     const CATEGORY_LIST = "/v2/category/list";  // 业务分类列表接口地址

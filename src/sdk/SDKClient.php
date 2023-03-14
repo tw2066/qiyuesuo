@@ -3,7 +3,7 @@ namespace Qiyuesuo\sdk;
 use Qiyuesuo\sdk\request\SdkRequest;
 use Qiyuesuo\sdk\http\HttpHeader;
 use Qiyuesuo\sdk\http\HttpClient;
-header("Content-Type: text/html; charset=utf-8");
+
 
 /**
  *

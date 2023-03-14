@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class ContractCompanySignRequest extends SdkRequest {
 
     const COMPANYSIGN_URL = "/v2/contract/companysign";
@@ -10,7 +12,7 @@ class ContractCompanySignRequest extends SdkRequest {
     private $stampers;
 
     public function getUrl() {
-       return self::COMPANYSIGN_URL;
+        return self::COMPANYSIGN_URL;
     }
 
     public function getHttpParamers() {

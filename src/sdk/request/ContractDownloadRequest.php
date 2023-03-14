@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class ContractDownloadRequest extends SdkRequest {
 
     const CONTRACT_DOWNLOAD = "/v2/contract/download";  // 合同下载接口地址

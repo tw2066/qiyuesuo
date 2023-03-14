@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class TemplateListRequest extends SdkRequest {
 
     const SEAL_LIST = "/v2/template/list";  // 文件模板列表接口地址

@@ -1,6 +1,6 @@
 <?php
 namespace Qiyuesuo\sdk\bean;
-header("Content-Type: text/html; charset=utf-8");
+
 class Contract implements \JsonSerializable {
 
 	private $id;                // 合同ID

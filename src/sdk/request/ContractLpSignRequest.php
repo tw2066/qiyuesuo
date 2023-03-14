@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class ContractLpSignRequest extends SdkRequest {
 
     const LPSIGN_URL = "/v2/contract/legalpersonsign";

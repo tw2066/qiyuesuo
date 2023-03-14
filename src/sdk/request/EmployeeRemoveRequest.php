@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class EmployeeRemoveRequest extends SdkRequest {
 
     const EMPLOYEE_REMOVE = "/v2/employee/remove";  // 员工移除接口地址

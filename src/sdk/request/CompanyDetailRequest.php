@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class CompanyDetailRequest extends SdkRequest {
 
     const COMPANY_DETAIL = "/v2/company/detail";  // 公司详情接口地址

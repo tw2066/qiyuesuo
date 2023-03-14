@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class EmployeeUpdateRequest extends SdkRequest {
 
     const EMPLOYEE_UPDATE = "/v2/employee/update";  // 员工信息修改接口地址

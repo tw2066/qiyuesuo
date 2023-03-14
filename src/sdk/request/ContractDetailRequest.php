@@ -1,6 +1,8 @@
 <?php
 namespace Qiyuesuo\sdk\request;
 
+use Qiyuesuo\sdk\param\ParamSwitcher;
+use Qiyuesuo\sdk\http\HttpParameter;
 class ContractDetailRequest extends SdkRequest {
 
     const CONTRACT_DETAIL = "/v2/contract/detail";  // 合同详情接口地址

@@ -1,7 +1,7 @@
 <?php
 namespace Qiyuesuo\sdk\bean;
 
-header("Content-Type: text/html; charset=utf-8");
+
 class Seal implements \JsonSerializable {
 
     public function jsonSerialize() {
