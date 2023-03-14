@@ -11,15 +11,14 @@ header("Content-Type: text/html; charset=utf-8");
     require_once(dirname(__FILE__).'/'."ContractCreate.func.php");
     // require_once(dirname(__FILE__).'/'."../qiyuesuoSDK/com/qiyuesuo/Util.php");
     // require_once(dirname(__FILE__).'/'."ContractCreate.func.php");
-
-    $sdkClient = Util::getSDk();
+    $qiyuesuoClint = new Util('xUVCqGNsOC','vIHYO10UWT9nBDWTzVyJr9dQvmVCyS','dev');
+    $sdkClient = $qiyuesuoClint->getSDk();
     print("===自定义签署方创建合同草稿==="."\n");
 
     $result = testDraftContract($sdkClient);
     if($result == false) {
         exit(0);
     }
-    exit;
     // 合同ID
     $contractId = $result['result']['id'];
     // 业务ID
@@ -33,7 +32,7 @@ header("Content-Type: text/html; charset=utf-8");
     // 公章签署节点ID
     $companyActionId = $result['result']['signatories'][0]['actions'][0]['id'];
     // 法人签署节点ID
-    $lpActionId = $result['result']['signatories'][0]['actions'][1]['id'];
+    // $lpActionId = $result['result']['signatories'][0]['actions'][1]['id'];
 
     /** 添加合同文档（根据本地文件） */
     $result = testDocumentAddByFile($contractId, $bizId, $sdkClient);
@@ -48,7 +47,7 @@ header("Content-Type: text/html; charset=utf-8");
     // }
     // $documentId2 = $result['result']['documentId'];
     // /** 发起合同 */
-    $result = testSendContract($contractId, $bizId, $documentId1, $signatoryId, $companyActionId, $lpActionId, $sdkClient);
+    $result = testSendContract($contractId, $bizId, $documentId1, $signatoryId, $companyActionId, 0, $sdkClient);
     if($result == false) {
         exit(0);
     }

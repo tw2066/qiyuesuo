@@ -58,16 +58,36 @@ use Qiyuesuo\sdk\SDKClient;
 // require_once (dirname(__FILE__).'/sdk/request/'."TemplatePageRequest.php");
 
 class Util {
-    const url = "https://openapi.qiyuesuo.cn";
-    const accessKey = "xUVCqGNsOC";
-    const accessSecret = "vIHYO10UWT9nBDWTzVyJr9dQvmVCyS";
 
-    public static function getSDk() {
-        $url = self::url;
-        $accessKey = self::accessKey;
-        $accessSecret = self::accessSecret;
+    private $url = "https://openapi.qiyuesuo.cn";
+    private $accessKey = "xUVCqGNsOC";
+    private $accessSecret = "vIHYO10UWT9nBDWTzVyJr9dQvmVCyS";
+
+    public function __construct($accessKey, $accessKeySecret, $endpoint="")
+    {
+        $accessKey = trim($accessKey);
+        $accessKeySecret = trim($accessKeySecret);
+        // $endpoint = trim(trim($endpoint), "/");
+
+        if (empty($accessKey)) {
+            throw new \Exception("access key id is empty");
+        }
+        if (empty($accessKeySecret)) {
+            throw new \Exception("access key secret is empty");
+        }
+        // if (empty($endpoint)) {
+        //     throw new \Exception("endpoint is empty");
+        // }
+        $this->url = ($endpoint=="dev")?"https://openapi.qiyuesuo.cn":"https://openapi.qiyuesuo.com";
+        $this->accessKey = $accessKey;
+        $this->accessSecret = $accessKeySecret;
+    }
+
+    public function getSDk() {
+        $url = $this->url;
+        $accessKey = $this->accessKey;
+        $accessSecret = $this->accessSecret;
         $SDk = new SDKClient($accessKey, $accessSecret, $url);
         return $SDk;
     }
-
 }

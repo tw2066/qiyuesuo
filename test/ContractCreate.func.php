@@ -28,18 +28,18 @@ use Qiyuesuo\sdk\request\ContractDownloadRequest;
         $contract->setSubject("V2合同");
         $contract->setSend(false);
 
-        $category = new Category();
-        $category->setName("默认业务分类");
-        $contract->setCategory($category);
+        // $category = new Category();
+        // $category->setName("默认业务分类");
+        // $contract->setCategory($category);
 
         /**公司签署方**/
         $companySignatory = new Signatory();
         $companySignatory->setTenantType("COMPANY");
-        $companySignatory->setTenantName("xxx网络科技有限公司");
+        $companySignatory->setTenantName("泉州遨游龙翔网络科技有限公司");
         $companySignatory->setSerialNo(1);
 
         $receiver = new User();
-        $receiver->setContact("110");
+        $receiver->setContact("18859499832");
         $receiver->setContactType("MOBILE");
 
         $companySignatory->setReceiver($receiver);
@@ -51,7 +51,7 @@ use Qiyuesuo\sdk\request\ContractDownloadRequest;
         $companyAction->setSerialNo(1);
         /**公章签署操作人**/
         $companyOperator = new User();
-        $companyOperator->setContact("110");
+        $companyOperator->setContact("18859499832");
         $companyOperator->setContactType("MOBILE");
 
         $companyOperators = array();
@@ -68,7 +68,7 @@ use Qiyuesuo\sdk\request\ContractDownloadRequest;
         /**公司签署方设置公章签署动作**/
         array_push($actions, $companyAction);
         /**公司签署方设置审批动作**/
-        array_push($actions, $lpAction);
+        // array_push($actions, $lpAction);
 
         $companySignatory->setActions($actions);
 
@@ -79,7 +79,7 @@ use Qiyuesuo\sdk\request\ContractDownloadRequest;
         $personalSignatory->setSerialNo(2);
 
         $receiver = new User();
-        $receiver->setContact("110");
+        $receiver->setContact("18695605150");
         $receiver->setContactType("MOBILE");
 
         $personalSignatory->setReceiver($receiver);
@@ -92,12 +92,12 @@ use Qiyuesuo\sdk\request\ContractDownloadRequest;
         $contract->setSignatories($signatories);
 
         // /\*\*填写模板参数\*\*/
-        // $templateParam1 = new TemplateParam();
-        // $templateParam1->setName("参数1");
-        // $templateParam1->setValue("值1");
-        // $templateParams = array();
-        // array_push($templateParams, $templateParam1);
-        // $contract->setTemplateParams($signatories);
+        $templateParam1 = new TemplateParam();
+        $templateParam1->setName("参数1");
+        $templateParam1->setValue("值1");
+        $templateParams = array();
+        array_push($templateParams, $templateParam1);
+        $contract->setTemplateParams($signatories);
 
         $baseRequest = new ContractDraftRequest($contract);
 
@@ -208,18 +208,18 @@ use Qiyuesuo\sdk\request\ContractDownloadRequest;
         // $stamper2->setOffsetX('0.5');
         // $stamper2->setOffsetY('0.5');
 
-        $stamper3 = new Stamper();
-        $stamper3->setType('PERSONAL');
-        $stamper3->setSignatoryId($signatoryId);
-        $stamper3->setDocumentId($documentId);
-        $stamper3->setPage(1);
-        $stamper3->setOffsetX('0.9');
-        $stamper3->setOffsetY('0.9');
+        // $stamper3 = new Stamper();
+        // $stamper3->setType('PERSONAL');
+        // $stamper3->setSignatoryId($signatoryId);
+        // $stamper3->setDocumentId($documentId);
+        // $stamper3->setPage(1);
+        // $stamper3->setOffsetX('0.9');
+        // $stamper3->setOffsetY('0.9');
 
         $stampers = array();
         array_push($stampers, $stamper1);
         // array_push($stampers, $stamper2);
-        array_push($stampers, $stamper3);
+        // array_push($stampers, $stamper3);
 
         $contractSendRequest->setStampers($stampers);
         $result = $sdkClient->service($contractSendRequest);
@@ -315,7 +315,7 @@ use Qiyuesuo\sdk\request\ContractDownloadRequest;
         $contractPageRequest->setBizId($bizId);
 
         $user = new User();
-        $user->setContact("110");
+        $user->setContact("18859499832");
         $user->setContactType("MOBILE");
 
         $contractPageRequest->setUser($user);
