@@ -2,6 +2,8 @@
 namespace test;
 
 use Qiyuesuo\Util;
+use Qiyuesuo\sdk\request\TemplateCreateByWordRequest;
+
 header("Content-Type: text/html; charset=utf-8");
     /**
     * 合同自定义创建接口   简单流程测试
@@ -14,7 +16,15 @@ header("Content-Type: text/html; charset=utf-8");
     $qiyuesuoClint = new Util('xUVCqGNsOC','vIHYO10UWT9nBDWTzVyJr9dQvmVCyS','dev');
     $sdkClient = $qiyuesuoClint->getSDk();
     print("===自定义签署方创建合同草稿==="."\n");
+    $baseRequest = new TemplateCreateByWordRequest();
+    $baseRequest->setTitle('你好');
 
+    $file_path = __DIR__.'/111.docx';
+    $file_path = iconv("UTF-8", "GBK", realpath($file_path));
+    $file = new \CURLFile($file_path);
+    $baseRequest->setFile($file);
+    $res = $sdkClient->service($baseRequest);
+    exit;
     $result = testDraftContract($sdkClient);
     if($result == false) {
         exit(0);
