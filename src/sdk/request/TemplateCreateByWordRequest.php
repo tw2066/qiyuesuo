@@ -8,6 +8,7 @@ class TemplateCreateByWordRequest extends SdkRequest {
     const SEND_URL = "/v3/template/createbyword";
     private $title;
     private $file;
+    private $tenantName;
     // private $stampers;
 
     public function getUrl() {
@@ -20,10 +21,27 @@ class TemplateCreateByWordRequest extends SdkRequest {
         $paramSwitcher->addParam('file', $this->file);
         $paramSwitcher->addParam('allUser', true);
         $paramSwitcher->addParam('status', 'ENABLED');
+        $paramSwitcher->addParam('tenantName', $this->tenantName);
 
         $httpParameter = HttpParameter::httpPostParamer();
         $httpParameter->setParams($paramSwitcher->getParams());
         return $httpParameter;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTenantName()
+    {
+        return $this->tenantName;
+    }
+
+    /**
+     * @param mixed $contractId
+     */
+    public function setTenantName($contractId)
+    {
+        $this->tenantName = $contractId;
     }
 
     /**

@@ -11,6 +11,7 @@ class DocumentAddByTemplateRequest extends SdkRequest {
     private $bizId;
     private $title;
     private $templateId;
+    private $tenantName;
     private $templateParams;
 
     public function getUrl() {
@@ -24,6 +25,7 @@ class DocumentAddByTemplateRequest extends SdkRequest {
         $paramSwitcher->addParam('title', $this->title);
         $paramSwitcher->addParam('templateId', $this->templateId);
         $paramSwitcher->addParam('templateParams', $this->templateParams);
+        $paramSwitcher->addParam('tenantName', $this->tenantName);
 
         $httpParameter = HttpParameter::httpPostParamer();
         $httpParameter->setJsonParams(json_encode($paramSwitcher->getParams()));
@@ -44,6 +46,22 @@ class DocumentAddByTemplateRequest extends SdkRequest {
     public function setContractId($contractId)
     {
         $this->contractId = $contractId;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getTenantName()
+    {
+        return $this->tenantName;
+    }
+
+    /**
+     * @param mixed $contractId
+     */
+    public function setTenantName($contractId)
+    {
+        $this->tenantName = $contractId;
     }
 
     /**
