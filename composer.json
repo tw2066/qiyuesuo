@@ -1,6 +1,6 @@
 {
     "name": "lincome/qiyuesuo",
-    "version": "1.6",
+    "version": "1.7",
     "description":"qiyuesuo",
     "autoload": {
         "psr-4": {
