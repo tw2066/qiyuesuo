@@ -1,17 +1,11 @@
 {
-    "name": "lincome/qiyuesuo",
+    "name": "tangwei/qiyuesuo",
     "version": "1.7",
-    "description":"qiyuesuo",
+    "description":"php qiyuesuo sdk",
     "autoload": {
         "psr-4": {
             "Qiyuesuo\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "linqr",
-            "email": "59353073@qq.com"
-        }
-    ],
     "require": {}
 }
