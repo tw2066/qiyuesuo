@@ -7,5 +7,7 @@
             "Qiyuesuo\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "ext-json": "*"
+    }
 }
