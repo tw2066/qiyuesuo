@@ -1,6 +1,5 @@
 {
     "name": "tangwei/qiyuesuo",
-    "version": "1.7",
     "description":"php qiyuesuo sdk",
     "autoload": {
         "psr-4": {
@@ -9,5 +8,8 @@
     },
     "require": {
         "ext-json": "*"
+    },
+    "branch-alias": {
+        "dev-master": "1.0.x-dev"
     }
 }
