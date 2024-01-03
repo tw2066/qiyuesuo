@@ -1,5 +1,5 @@
 <?php
-namespace test;
+namespace tests;
 
 use Qiyuesuo\Util;
 use Qiyuesuo\sdk\request\TemplateCreateByWordRequest;

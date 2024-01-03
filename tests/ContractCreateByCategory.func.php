@@ -1,5 +1,5 @@
 <?php
-namespace test;
+namespace tests;
 
 use Qiyuesuo\sdk\SDKClient;
 use Qiyuesuo\sdk\bean\Contract;

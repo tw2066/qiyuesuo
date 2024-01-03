@@ -1,5 +1,5 @@
 <?php
-namespace test;
+namespace tests;
 
 use Qiyuesuo\Util;
 header("Content-Type: text/html; charset=utf-8");
