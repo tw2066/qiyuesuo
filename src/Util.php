@@ -8,6 +8,9 @@ use Qiyuesuo\sdk\SDKClient;
 class Util
 {
 
+    /**
+     * @throws Exception
+     */
     public static function getSDk($accessKey, $accessSecret, $endpoint = '')
     {
         $accessKey = trim($accessKey);
@@ -26,6 +29,7 @@ class Util
     }
 
     /**
+     * 解密
      * @param $encrypt
      * @param $secretKey
      * @return false|string
@@ -38,6 +42,23 @@ class Util
             $secretKey,
             OPENSSL_RAW_DATA
         );
+    }
+
+    /**
+     * 加密
+     * @param $encrypt
+     * @param $secretKey
+     * @return string
+     */
+    public static function aesEncrypt($encrypt, $secretKey)
+    {
+        $data = openssl_encrypt(
+            $encrypt,
+            'AES-128-ECB',
+            $secretKey,
+            OPENSSL_RAW_DATA
+        );
+        return base64_encode($data);
     }
 
     public static function checkSignature($signature, $timestamp, $secretKey)
