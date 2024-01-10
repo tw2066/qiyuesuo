@@ -1,5 +1,6 @@
 <?php
 namespace Qiyuesuo\sdk;
+use Qiyuesuo\sdk\request\ContractDownloadRequest;
 use Qiyuesuo\sdk\request\SdkRequest;
 use Qiyuesuo\sdk\http\HttpHeader;
 use Qiyuesuo\sdk\http\HttpClient;
@@ -54,7 +55,8 @@ class SDKClient{
         } else {
             $result = (new HttpClient())->doService($url, $httpParamers, $httpHeader, self::connectTimeout, self::readTimeout);
         }
-        if(strpos($url, 'download') === false ){
+
+        if($baseRequest->getUrl() != ContractDownloadRequest::CONTRACT_DOWNLOAD){
             $result = json_decode($result, true);
         }
         return $result;
