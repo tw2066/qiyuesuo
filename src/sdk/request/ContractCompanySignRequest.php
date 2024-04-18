@@ -10,6 +10,7 @@ class ContractCompanySignRequest extends SdkRequest {
     private $contractId;
     private $bizId;
     private $stampers;
+    private $tenantName;
 
     public function getUrl() {
         return self::COMPANYSIGN_URL;
@@ -20,6 +21,7 @@ class ContractCompanySignRequest extends SdkRequest {
         $paramSwitcher->addParam('contractId', $this->contractId);
         $paramSwitcher->addParam('bizId', $this->bizId);
         $paramSwitcher->addParam('stampers', $this->stampers);
+        $paramSwitcher->addParam('tenantName', $this->tenantName);
 
         $httpParameter = HttpParameter::httpPostParamer();
         $httpParameter->setJsonParams(json_encode($paramSwitcher->getParams()));
@@ -72,6 +74,22 @@ class ContractCompanySignRequest extends SdkRequest {
     public function setStampers($stampers)
     {
         $this->stampers = $stampers;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTenantName()
+    {
+        return $this->tenantName;
+    }
+
+    /**
+     * @param mixed $tenantName
+     */
+    public function setTenantName($tenantName): void
+    {
+        $this->tenantName = $tenantName;
     }
 
 }
